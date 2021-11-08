@@ -34,6 +34,8 @@ const pool = mysql.createPool(
 12171756|김동언|3|정보통신공학과|2021.09.19.15:39:55|ahzmdkd1357@gmail.com|
 12347654|홍길동|2|정보통신공학과|2021.08.11.13:11:30|ICE@naver.com|
 12998877|김영희|3|컴퓨터공학과|2020.01.31.08:12:52|kyh@naver.com|
+
+- PRIMARY KEY : 학번
 <br>
 
 ## <span style="color:red">========week8 테이블========</span>
@@ -46,6 +48,8 @@ Fname|Minit|Lname|Ssn|Bdate|Addr|Sex|Salary|Super_ssn|Dno
 영희|B|최|12341234|1999.09.09|부산|여|1200|12121212|2|
 민수|P|김|12344321|1998.12.25|강원|남|2500|-|3|
 
+- PRIMARY KEY : Ssn
+
 ## 부서(Department)
 
 Dname|Dnumber|Mgr_ssn|Mgr_start_date
@@ -54,6 +58,9 @@ Headquarter|1|12312312|2021.01.01|
 Marketing|2|12121212|2020.12.25|
 Human Resources|3|12344321|2021.02.02|
 
+- PRIMARY KEY : Dnumber
+<br>
+- FOREIGN KEY : Mgr_ssn -> Employee(Ssn)
 <br>
 
 ## <span style="color:red">========week10 테이블========</span>
@@ -66,6 +73,7 @@ Human Resources|3|12344321|2021.02.02|
 정보통신공학과|0|
 컴퓨터공학과|1|
 
+- PRIMARY KEY : 번호
 ## 과목 리스트(Course)
 
 과목이름|과목코드|과목번호
@@ -75,3 +83,4 @@ Human Resources|3|12344321|2021.02.02|
 전자기학|ICE2121|3|
 자료구조론|ICE2222|4|
 데이터베이스설계|ICE4016|5|
+- PRIMARY KEY : 과목번호
