@@ -59,7 +59,6 @@ Marketing|2|12121212|2020.12.25|
 Human Resources|3|12344321|2021.02.02|
 
 - PRIMARY KEY : Dnumber
-<br>
 - FOREIGN KEY : Mgr_ssn -> Employee(Ssn)
 <br>
 
