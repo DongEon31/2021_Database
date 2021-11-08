@@ -1,0 +1,46 @@
+<h1>{{ title1 }}</h1>
+<table>
+  <tr>
+    <td>Dname</td>
+    <td>Dnumber</td>
+  </tr>
+  {{#each department}}
+    <form method="post">
+      <tr>
+        <td>{{Dname}}</td>
+        <td>{{Dnumber}}</td>
+        <td style="border: none; margin-left: 10px;">
+          
+        </td>
+      </tr>    
+    </form>
+  {{/each}}
+</table>
+
+<h2>{{ title2 }}</h2>
+<table>
+  <tr>
+    <td>Coursename</td>
+    <td>Coursenumber</td>
+    <td>Cno</td>
+  </tr>
+  {{#each course}}
+    <form method="post">
+      <tr>
+        <td>{{course_name}}</td>
+        <td>{{course_number}}</td>
+        <td>{{Cno}}</td>
+        <td style="border: none; margin-left: 10px;">
+          <button 
+            style="margin-left: 10px;"
+            type="submit" 
+            name="delBtn"
+            value={{course_number}}
+            formaction="/delete">
+          삭제
+          </button>
+        </td>
+      </tr>    
+    </form>
+  {{/each}}
+</table>
