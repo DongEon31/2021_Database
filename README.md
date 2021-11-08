@@ -19,7 +19,7 @@ const pool = mysql.createPool(
         password: 'password', // 본인의 mysql password
         waitForConnections: true,
         connectionLimit: 10,
-        queueLijmit: 0
+        queueLimit: 0
     }
 );
 </code>
