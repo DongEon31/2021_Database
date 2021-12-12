@@ -1,0 +1,192 @@
+<h1>Admin PAGE. </h1>
+<form method="post">
+         <tr>
+              <td style="border:none; margin-left: 10px;">
+                <button
+                style="margin-left: 10px;"
+                name='updateadmin'
+                type="submit"
+                value="1"
+                >
+                Go to Admin UPDATE PAGE</button>
+             </td>
+        </tr>
+    </form>
+    <form method="post" >
+         <tr>
+              <td style="border:none; margin-left: 10px;">
+                <button
+                style="margin-left: 10px;"
+                name='home'
+                type="submit"
+                value="1"
+                >
+                Go to HOME PAGE</button>
+             </td>
+        </tr>
+    </form>
+<h1> {{ title }}</h1>
+
+<table>
+    <tr>
+        <td>Airport Code</td>
+        <td>Name</td>
+        <td>City</td>
+        <td>State</td>
+    </tr>
+    {{#each airport}}
+    <form method="post">
+         <tr>
+              <td>{{Airport_code}}</td>
+              <td>{{Name}}</td>
+              <td>{{City}}</td>
+              <td>{{State}}</td>
+              <td style="border:none; margin-left: 10px;">
+                <button
+                style="margin-left: 10px;"
+                name='delairport'
+                type="submit"
+                value="{{Airport_code}}"
+                >
+                삭제
+             </td>
+        </tr>
+    </form>
+    {{/each}}
+</table>
+
+<h1>Insert AIRPORT here</h1>
+
+<form name="airport" method="post" action='/admin'>
+    <div>
+        <label for="Airport_code">Airport_code</label>
+        <input id="Airport_code" name="Airport_code" type="text" required placeholder="Airport_code">
+    </div>
+    <div>
+        <label for="Name">Name</label>
+        <input id="Name" name="Name" type="text" placeholder="Name">
+    </div>
+    <div>
+        <label for="City">City</label>
+        <input id="City" name="City" type="text" required placeholder="City">
+    </div>
+    <div>
+        <label for="State">State</label>
+        <input id="State" name="State" type="text" placeholder="State">
+    </div>
+    <div>
+        <input type="submit" value="삽입">
+    </div>
+</form>
+<br><br>
+
+
+<h1>{{ title2 }}</h1>
+
+<table>
+    <tr>
+        <td>Airplane ID</td>
+        <td>Total Seats</td>
+        <td>Airplane Type</td>
+        <td>Company</td>
+        <td>Size</td>
+    </tr>
+    {{#each airplane}}
+    <form method="post">
+         <tr>
+              <td>{{Airplane_id}}</td>
+              <td>{{Total_number_of_seats}}</td>
+              <td>{{Airplane_type}}</td>
+              <td>{{Company}}</td>
+              <td>{{Size}}</td>
+              <td style="border:none; margin-left: 10px;">
+                <button
+                style="margin-left: 10px;"
+                name='delairplane'
+                type="submit"
+                value="{{Airplane_id}}"
+                >
+                삭제
+             </td>
+        </tr>
+    </form>
+    {{/each}}
+</table>
+
+<h1>Insert AIRPLANE here</h1>
+
+<form name="airplane" method="post" action='/admin'>
+    <div>
+        <label for="Airplane_id">Airplane_id</label>
+        <input id="Airplane_id" name="Airplane_id" type="text" required placeholder="Airplane_id">
+    </div>
+    <div>
+        <label for="Total_number_of_seats">Total_number_of_seats</label>
+        <input id="Total_number_of_seats" name="Total_number_of_seats" type="text" placeholder="Total_number_of_seats">
+    </div>
+    <div>
+        <label for="Airplane_type">Airplane_type</label>
+        <input id="Airplane_type" name="Airplane_type" type="text" placeholder="Airplane_type">
+    </div>
+    <div>
+        <label for="Company">Company</label>
+        <input id="Company" name="Company" type="text" placeholder="Company">
+    </div>
+    <div>
+        <label for="Size">Size</label>
+        <input id="Size" name="Size" type="text" placeholder="Size">
+    </div>
+    <div>
+        <input type="submit" value="삽입">
+    </div>
+</form>
+<br><br>
+
+<h1>{{ title3 }}</h1>
+
+<table>
+    <tr>
+        <td>Flight_number</td>
+        <td>Airline</td>
+        <td>Weekdays</td>
+    </tr>
+    {{#each flight}}
+     <form method="post">
+         <tr>
+              <td>{{Flight_number}}</td>
+              <td>{{Airline}}</td>
+              <td>{{Weekdays}}</td>
+              <td style="border:none; margin-left: 10px;">
+                <button
+                style="margin-left: 10px;"
+                name='delflight'
+                type="submit"
+                value="{{Flight_number}}"
+                >
+                삭제
+             </td>
+        </tr>
+    </form>
+    {{/each}}
+</table>
+
+<h1>Insert FLIGHT here</h1>
+
+<form name="flight" method="post" action='/admin'>
+    <div>
+        <label for="Flight_number">Flight_number</label>
+        <input id="Flight_number" name="Flight_number" type="text" required placeholder="Flight_number">
+    </div>
+    <div>
+        <label for="Airline">Airline</label>
+        <input id="Airline" name="Airline" type="text" required placeholder="Airline">
+    </div>
+    <div>
+        <label for="Weekdays">Weekdays</label>
+        <input id="Weekdays" name="Weekdays" type="text" placeholder="Weekdays">
+    </div>
+    <div>
+        <input type="submit" value="삽입">
+    </div>
+</form>
+<br><br>

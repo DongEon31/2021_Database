@@ -1,0 +1,118 @@
+<h1>2021 AIRLINE Database</h1>
+ <form method="post">
+         <tr>
+              <td style="border:none; margin-left: 10px;">
+                <button
+                style="margin-left: 10px;"
+                name='admin'
+                type="submit"
+                value="1"
+                >
+                Go to Admin PAGE</button>
+             </td>
+        </tr>
+    </form>
+    <form method="post">
+         <tr>
+              <td style="border:none; margin-left: 10px;">
+                <button
+                style="margin-left: 10px;"
+                name='updateadmin'
+                type="submit"
+                value="1"
+                >
+                Go to Admin UPDATE PAGE</button>
+             </td>
+        </tr>
+    </form>
+    <form method="post">
+         <tr>
+              <td style="border:none; margin-left: 10px;">
+                <button
+                style="margin-left: 10px;"
+                name='user'
+                type="submit"
+                value="1"
+                >
+                Go to USER PAGE</button>
+             </td>
+        </tr>
+    </form>
+<h1> {{ title }}</h1>
+
+<table>
+    <tr>
+        <td>Airport Code</td>
+        <td>Name</td>
+        <td>City</td>
+        <td>State</td>
+    </tr>
+    {{#each airport}}
+         <tr>
+              <td>{{Airport_code}}</td>
+              <td>{{Name}}</td>
+              <td>{{City}}</td>
+              <td>{{State}}</td>
+        </tr>
+    {{/each}}
+</table>
+
+<h1>{{ title2 }}</h1>
+
+<table>
+    <tr>
+        <td>Airplane ID</td>
+        <td>Total Seats</td>
+        <td>Airplane Type</td>
+        <td>Company</td>
+        <td>Size</td>
+    </tr>
+    {{#each airplane}}
+         <tr>
+              <td>{{Airplane_id}}</td>
+              <td>{{Total_number_of_seats}}</td>
+              <td>{{Airplane_type}}</td>
+              <td>{{Company}}</td>
+              <td>{{Size}}</td>
+        </tr>
+    {{/each}}
+</table>
+
+<h1>{{ title3 }}</h1>
+
+<table>
+    <tr>
+        <td>Flight_number</td>
+        <td>Airline</td>
+        <td>Weekdays</td>
+    </tr>
+    {{#each flight}}
+         <tr>
+              <td>{{Flight_number}}</td>
+              <td>{{Airline}}</td>
+              <td>{{Weekdays}}</td>
+        </tr>
+    {{/each}}
+</table>
+<h1>{{ title4 }}</h1>
+
+<table>
+    <tr>
+        <td>Flight number</td>
+        <td>Leg number</td>
+        <td>Date</td>
+        <td>Seat Number</td>
+        <td>Customer ID</td>
+        <td>Customer Name</td>
+    </tr>
+    {{#each seat}}
+    <tr>
+        <td>{{Flight_number}}</td>
+        <td>{{Leg_number}}</td>
+        <td>{{Date}}</td>
+        <td>{{Seat_number}}</td>
+        <td>{{Customer_id}}</td>
+        <td>{{Customer_name}}</td>
+    </tr>
+    {{/each}}
+</table>

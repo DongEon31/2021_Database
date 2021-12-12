@@ -1,0 +1,83 @@
+<h1>Admin UPDATE PAGE. </h1>
+<form method="post">
+         <tr>
+              <td style="border:none; margin-left: 10px;">
+                <button
+                style="margin-left: 10px;"
+                name='admin'
+                type="submit"
+                value="1"
+                >
+                Go to Admin PAGE</button>
+             </td>
+        </tr>
+    </form>
+<h1> {{ title }}</h1>
+
+<table>
+    <tr>
+        <td>Airport Code</td>
+        <td>Name</td>
+        <td>City</td>
+        <td>State</td>
+    </tr>
+    {{#each airport}}
+    <form method="post" action='/updateadmin'>
+         <tr>
+              <td><input type="text" name="Airport_code" placeholder={{Airport_code}}></td>
+              <td><input type="text" name="Name" placeholder={{Name}}></td>
+              <td><input type="text" name="City" placeholder={{City}}></td>
+              <td><input type="text" name="State" placeholder={{State}}></td>
+              <td><input type="submit" value="수정">
+             </td>
+        </tr>
+    </form>
+    {{/each}}
+</table>
+
+
+<h1>{{ title2 }}</h1>
+
+<table>
+    <tr>
+        <td>Airplane ID</td>
+        <td>Total Seats</td>
+        <td>Airplane Type</td>
+        <td>Company</td>
+        <td>Size</td>
+    </tr>
+    {{#each airplane}}
+    <form method="post" action='/updateadmin'>
+         <tr>
+              <td><input type="text" name="Airplane_id" placeholder={{Airplane_id}}></td>
+              <td><input type="text" name="Total_number_of_seats" placeholder={{Total_number_of_seats}}></td>
+              <td><input type="text" name="Airplane_type" placeholder={{Airplane_type}}></td>
+              <td><input type="text" name="Company" placeholder={{Company}}></td>
+              <td><input type="text" name="Size" placeholder={{Size}}></td>
+              <td><input type="submit" value="수정">
+             </td>
+        </tr>
+    </form>
+    {{/each}}
+</table>
+
+
+<h1>{{ title3 }}</h1>
+
+<table>
+    <tr>
+        <td>Flight_number</td>
+        <td>Airline</td>
+        <td>Weekdays</td>
+    </tr>
+    {{#each flight}}
+     <form method="post" action='/updateadmin'>
+         <tr>
+              <td><input type="text" name="Flight_number" placeholder={{Flight_number}}></td>
+              <td><input type="text" name="Airline" placeholder={{Airline}}></td>
+              <td><input type="text" name="Weekdays" placeholder={{Weekdays}}></td>
+              <td><input type="submit" value="수정">
+        </tr>
+    </form>
+    {{/each}}
+</table>

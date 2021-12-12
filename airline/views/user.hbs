@@ -1,0 +1,114 @@
+<h1>User PAGE.</h1>
+<form method="post">
+         <tr>
+              <td style="border:none; margin-left: 10px;">
+                <button
+                style="margin-left: 10px;"
+                name='home'
+                type="submit"
+                value="1"
+                >
+                Go to HOME PAGE</button>
+             </td>
+        </tr>
+    </form>
+<h1>{{ title }}</h1>
+<table>
+    <tr>
+        <td>Flight number</td>
+        <td>Leg number</td>
+        <td>Date</td>
+        <td>Seat Number</td>
+        <td>Customer ID</td>
+        <td>Customer Name</td>
+    </tr>
+    {{#each seat}}
+         <form method="post">
+    <tr>
+        <td>{{Flight_number}}</td>
+        <td>{{Leg_number}}</td>
+        <td>{{Date}}</td>
+        <td>{{Seat_number}}</td>
+        <td>{{Customer_id}}</td>
+        <td>{{Customer_name}}</td>
+              <td style="border:none; margin-left: 10px;">
+                <input type="hidden" name='delreserve1'
+                value="{{Flight_number}}">
+                <input type="hidden" name='delreserve2'
+                value="{{Leg_number}}">
+                <input type="hidden" name='delreserve3'
+                value="{{Date}}">
+                <input type="hidden" name='delreserve4'
+                value="{{Seat_number}}">
+                <button
+                style="margin-left: 10px;"
+                type="submit"
+                >
+                삭제
+             </td>
+        </tr>
+    </form>
+    </tr>
+    {{/each}}
+</table>
+
+<h1>{{ title2 }}</h1>
+<table>
+    <tr>
+        <td>Flight number</td>
+        <td>Leg number</td>
+        <td>Date</td>
+        <td>REMAINDERs</td>
+        <td>Airplane ID</td>
+        <td>Departure AIRPORT</td>
+        <td>Departure TIME</td>
+        <td>Arrival AIRPORT</td>
+        <td>Arrival TIME</td>
+    </tr>
+    {{#each instance}}
+    <tr>
+        <td>{{Flight_number}}</td>
+        <td>{{Leg_number}}</td>
+        <td>{{Date}}</td>
+        <td>{{REMAINDER}}</td>
+        <td>{{Airplane_id}}</td>
+        <td>{{Departure_airport_code}}</td>
+        <td>{{Departure_time}}</td>
+        <td>{{Arrival_airport_code}}</td>
+        <td>{{Arrival_time}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+<h1>Reserve here</h1>
+
+<form name="reserve" method="post" action='/user'>
+    <div>
+        <label for="Flight_number">Flight_number</label>
+        <input id="Flight_number" name="Flight_number" type="text" required placeholder="Flight_number">
+    </div>
+    <div>
+        <label for="Leg_number">Leg_number</label>
+        <input id="Leg_number" name="Leg_number" type="text" required placeholder="Leg_number">
+    </div>
+    <div>
+        <label for="Date">Date</label>
+        <input id="Date" name="Date" type="text" required placeholder="Date">
+    </div>
+    <div>
+        <label for="Seat_number">Seat Number</label>
+        <input id="Seat_number" name="Seat_number" type="text" required placeholder="Seat_number">
+    </div>
+    <div>
+        <label for="Customer_id">Customer ID</label>
+        <input id="Customer_id" name="Customer_id" type="text" required placeholder="Customer_id">
+    </div>
+    <div>
+        <label for="Customer_name">Customer Name </label>
+        <input id="Customer_name" name="Customer_name" type="text" required placeholder="Customer_name">
+    </div>
+    <div>
+        <input type="submit" value="삽입">
+    </div>
+</form>
+<br><br>
